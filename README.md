@@ -1,40 +1,38 @@
 # Reinforcement Learning for Blackjack
 ## Overview
 This project explores Reinforcement Learning (RL) techniques for optimizing strategy in the game of Blackjack. We implement and compare multiple RL algorithms, including:
-```
-Monte Carlo methods (On-Policy & Off-Policy)
-Q-Learning & Deep Q-Learning (DQN)
-SARSA (State-Action-Reward-State-Action)
-Advantage Actor-Critic (A2C)
-Proximal Policy Optimization (PPO)
-```
+
+#### Monte Carlo methods (On-Policy & Off-Policy)
+#### Q-Learning & Deep Q-Learning (DQN)
+#### SARSA (State-Action-Reward-State-Action)
+#### Advantage Actor-Critic (A2C)
+#### Proximal Policy Optimization (PPO)
+
 Our goal is to analyze these methods' learning efficiency and performance in decision-making under uncertainty, evaluating factors like convergence speed, stability, and final policy effectiveness.
 
 ## Motivation
 
 Blackjack is a well-defined environment with stochastic rewards and hidden information, making it an excellent testbed for reinforcement learning algorithms. The game presents challenges such as:
-```
-Large and heterogeneous state space
-Sparse rewards (only at the end of each round)
-Partial observability (dealer's full hand is unknown)
-Exploration vs. exploitation trade-offs
-```
+
+#### Large and heterogeneous state space
+#### Sparse rewards (only at the end of each round)
+#### Partial observability (dealer's full hand is unknown)
+#### Exploration vs. exploitation trade-offs
 
 ## Environment
 
 We use the OpenAI Gymnasium Blackjack-v1 environment, which simulates a simplified version of Blackjack. The game state consists of:
-```
-The player's current sum (12–21)
-The dealer's visible card (Ace–10)
-Whether the player has a usable Ace (counts as 11 without busting)
-Actions:
-Hit: Take another card.
-Stick: End the turn.
-Rewards:
-+1 for winning
-0 for drawing
--1 for losing
-```
+
+#### The player's current sum (12–21)
+#### The dealer's visible card (Ace–10)
+#### Whether the player has a usable Ace (counts as 11 without busting)
+#### Actions:
+##### Hit: Take another card.
+##### Stick: End the turn.
+#### Rewards:
+##### +1 for winning
+##### 0 for drawing
+##### -1 for losing
 
 ## Methods
 
